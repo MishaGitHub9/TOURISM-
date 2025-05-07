@@ -1376,6 +1376,7 @@
             gap: 12px;
             justify-content: center;
             margin-bottom: 48px;
+            padding: 0 16px;
         }
 
         .currency-btn {
@@ -1396,22 +1397,47 @@
         @media (max-width: 768px) {
             .currency-selector {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
                 gap: 8px;
-                padding: 0 16px;
+                max-width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 32px;
             }
 
             .currency-btn {
                 width: 100%;
+                min-width: 0;
                 justify-content: center;
-                padding: 10px;
+                padding: 10px 12px;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+
+            .currency-btn i {
                 font-size: 14px;
             }
 
-            .currency-btn:last-child {
-                grid-column: 1 / -1;
-                max-width: 200px;
-                margin: 0 auto;
+            .donate-content {
+                padding: 0 16px;
+            }
+
+            .donate-content h2 {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+
+            .donate-content p {
+                font-size: 16px;
+                margin-bottom: 32px;
+            }
+
+            .donate-cards-container {
+                padding: 0;
+            }
+
+            .donate-card {
+                padding: 24px 20px;
             }
         }
 
