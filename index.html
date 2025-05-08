@@ -1625,6 +1625,334 @@
                 font-size: 0.9rem;
             }
         }
+
+        .useful-links {
+            position: relative;
+            padding: 6rem 0;
+            background: #FBFCFC;
+            overflow: hidden;
+        }
+
+        .useful-links h2 {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .useful-links-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .useful-links-content > p {
+            color: #64748B;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 64px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            padding: 0 16px;
+            perspective: 1000px;
+        }
+
+        .link-card {
+            background: white;
+            padding: 40px 32px;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-decoration: none;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .link-card:hover::before {
+            opacity: 1;
+        }
+
+        .link-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+        }
+
+        .link-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2196F3 0%, #1E88E5 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            transform: translateZ(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .link-card:hover .link-icon {
+            transform: translateZ(30px) scale(1.05);
+        }
+
+        .link-icon i {
+            color: white;
+            font-size: 32px;
+        }
+
+        .link-card h3 {
+            color: #1E293B;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            transform: translateZ(15px);
+        }
+
+        .link-card p {
+            color: #64748B;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            flex-grow: 1;
+            transform: translateZ(10px);
+        }
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 32px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #2196F3 0%, #1E88E5 100%);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            transform: translateZ(20px);
+        }
+
+        .link-btn:hover {
+            transform: translateZ(25px) scale(1.05);
+            box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+        }
+
+        .link-btn i {
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .link-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        @media (max-width: 768px) {
+            .useful-links {
+                padding: 80px 16px;
+            }
+            
+            .useful-links-content h2 {
+                font-size: 36px;
+            }
+            
+            .useful-links-content > p {
+                font-size: 16px;
+                margin-bottom: 48px;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .link-card {
+                padding: 32px 24px;
+            }
+
+            .link-icon {
+                width: 64px;
+                height: 64px;
+            }
+
+            .link-icon i {
+                font-size: 24px;
+            }
+        }
+
+        .faq-section {
+            padding: 6rem 0;
+            background: #FBFCFC;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-description {
+            text-align: center;
+            color: #64748B;
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            color: #1E293B;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #2196F3;
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: #2196F3;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 1000px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-answer p {
+            color: #64748B;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-answer ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .faq-answer li {
+            color: #64748B;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .faq-answer li::before {
+            content: '•';
+            color: #2196F3;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 4rem 1rem;
+            }
+
+            .faq-section h2 {
+                font-size: 2rem;
+            }
+
+            .section-description {
+                font-size: 1rem;
+            }
+
+            .faq-question {
+                font-size: 1rem;
+                padding: 1.25rem;
+            }
+
+            .faq-answer {
+                padding: 0 1.25rem;
+            }
+
+            .faq-item.active .faq-answer {
+                padding-bottom: 1.25rem;
+            }
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -1919,6 +2247,152 @@
                             <span class="lang-uk">Копіювати адресу</span>
                             <span class="lang-en" style="display: none;">Copy address</span>
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="useful-links">
+        <div class="container">
+            <div class="useful-links-content">
+                <h2 class="lang-uk">Корисні посилання</h2>
+                <h2 class="lang-en" style="display: none;">Useful Links</h2>
+                <p class="lang-uk">
+                    Інформація та сервіси, які допоможуть вам спланувати подорож Україною
+                </p>
+                <p class="lang-en" style="display: none;">
+                    Information and services to help you plan your trip to Ukraine
+                </p>
+
+                <div class="links-grid">
+                    <a href="https://visitukraine.today/uk/ukraine/country" class="link-card" target="_blank">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <h3 class="lang-uk">Правила в'їзду в Україну</h3>
+                            <h3 class="lang-en" style="display: none;">Entry Rules to Ukraine</h3>
+                            <p class="lang-uk">Актуальна інформація про правила в'їзду, необхідні документи та обмеження</p>
+                            <p class="lang-en" style="display: none;">Current information about entry rules, required documents and restrictions</p>
+                        </div>
+                        <div class="link-btn">
+                            <span class="lang-uk">Дізнатись більше</span>
+                            <span class="lang-en" style="display: none;">Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://visitukraine.today/uk/bookings" class="link-card" target="_blank">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-ticket-alt"></i>
+                            </div>
+                            <h3 class="lang-uk">Пошук квитків</h3>
+                            <h3 class="lang-en" style="display: none;">Ticket Search</h3>
+                            <p class="lang-uk">Бронювання квитків на потяг, автобус та літак</p>
+                            <p class="lang-en" style="display: none;">Book train, bus and plane tickets</p>
+                        </div>
+                        <div class="link-btn">
+                            <span class="lang-uk">Знайти квитки</span>
+                            <span class="lang-en" style="display: none;">Find Tickets</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+
+                    <a href="https://visitukraine.today/uk/hotels" class="link-card" target="_blank">
+                        <div class="link-content">
+                            <div class="link-icon">
+                                <i class="fas fa-hotel"></i>
+                            </div>
+                            <h3 class="lang-uk">Пошук готелів</h3>
+                            <h3 class="lang-en" style="display: none;">Hotel Search</h3>
+                            <p class="lang-uk">Зручний пошук та бронювання готелів по всій Україні</p>
+                            <p class="lang-en" style="display: none;">Convenient search and booking of hotels throughout Ukraine</p>
+                        </div>
+                        <div class="link-btn">
+                            <span class="lang-uk">Знайти готель</span>
+                            <span class="lang-en" style="display: none;">Find Hotel</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Поширені запитання</h2>
+            <p class="section-description">Відповіді на найпоширеніші запитання про подорожі в Україну</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Які COVID-документи потрібно мати зараз із собою при в'їзді до України?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>З 1-го липня 2023 року влада України скасувала карантин та решту обмежень, запроваджених через пандемію COVID-19. Відтепер для в'їзду в Україну Вам не потрібно надавати докази вакцинації, негативний результат ПЛР-тесту чи носити захисну маску.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Які документи потрібні для в'їзду в Україну?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>З 1-го липня 2023 року влада України скасувала карантин та решту обмежень, запроваджених через пандемію COVID-19. Відтепер для в'їзду в Україну Вам не потрібно надавати докази вакцинації, негативний результат ПЛР-тесту чи носити захисну маску.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Чи безпечно відвідувати Україну в умовах війни?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Останнім часом, в Україні збільшилась кількість іноземних мандрівників. Вони відвідують державу з різними цілями: волонтерська діяльність, участь в гуманітарних програмах, знімання репортажів або документальних фільмів, створення бізнесу тощо.</p>
+                        <p>Стовідсотково безпечних міст в Україні наразі не існує. І хоча основні бойові дії зосереджені у східній і південній частині України, територія всієї країни потрапляє під регулярні ракетні обстріли.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Які є рекомендації для безпеки перед поїздкою в Україну?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ось декілька важливих порад:</p>
+                        <ul>
+                            <li>Зробіть електронні копії всіх документів, збережіть їх на своєму електронному пристрої, щоб завжди мати доступ до них.</li>
+                            <li>Заздалегідь дізнайтесь час комендантської години в регіоні, куди ви збираєтесь.</li>
+                            <li>Встановіть додаток на смартфон "Повітряна тривога" та при отриманні сигналу – одразу пройдіть до найближчого укриття.</li>
+                            <li>При виборі готелю враховуйте наявність бомбосховищ.</li>
+                            <li>Проінформуйте рідних та друзів про свій маршрут та підтримуйте з ними зв'язок.</li>
+                            <li>Оформіть медичне страхування з розширеним покриттям.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Чи потрібно зареєструвати своє перебування в Україні іноземцям?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ні, якщо термін перебування в країні становить не більше 90 днів. Якщо ж іноземець приїхав на термін більший, ніж 90 діб, в такому випадку йому потрібна посвідка на тимчасове або постійне проживання, а також реєстрація за місцем проживання.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Чи можу я в'їхати в Україну з простроченою посвідкою на проживання?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Так. Іноземці (окрім громадян російської федерації) та особи без громадянства мають право в'їзду та законного перебування в Україні, якщо мають посвідку на тимчасове або постійне проживання, строк дії якої закінчився або які підлягають обміну після 24 лютого 2022 року.</p>
                     </div>
                 </div>
             </div>
@@ -3517,6 +3991,28 @@
                     map.setView([49.0, 31.0], 6);
                 }
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
         });
     </script>
 </body>
